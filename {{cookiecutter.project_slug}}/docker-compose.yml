@@ -20,11 +20,11 @@ services:
 
   frontend:
     build: 
-      context: ./frontend-nuxt
+      context: ./frontend
     command: npm run dev
     volumes:
       - ./.env:/app/.env:ro
-      - ./frontend-nuxt:/app
+      - ./frontend:/app
     working_dir: /app
     restart: on-failure
 

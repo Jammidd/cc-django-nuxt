@@ -1,50 +1,38 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "frontend-nuxt",
+  "version": "1.0.0",
+  "description": "My riveting Nuxt.js project",
+  "author": "",
   "private": true,
   "scripts": {
-    "serve": "npm i && vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "npm i && nuxt",
+    "build": "nuxt build",
+    "start": "npm i && nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    {% if cookiecutter.ui == 'Bootstrap' %}
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.2",
-    {% endif %}
-    "core-js": "^2.6.5",
-    {% if cookiecutter.api == 'GraphQL' %}
-    "graphql": "^14.4.2",
-    {% endif %}
-    "lodash": "^4.17.15",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.25",
-    "register-service-worker": "^1.5.2",
-    {% if cookiecutter.ui == 'Semantic UI' %}
-    "semantic-ui-vue": "0.8.1",
-    {% endif %}
-    {% if cookiecutter.ui == 'Tailwind CSS' %}
-    "tailwindcss": "^1.1.2",
-    {% endif %}
-    "vue": "^2.6.10",
-    {% if cookiecutter.analytics == "Google Analytics" %}"vue-analytics": "^5.16.0",{% endif %}
+    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
     {% if cookiecutter.api == 'GraphQL' %}
-    "vue-apollo": "^3.0.0-rc.2",
-    {% elif cookiecutter.api == 'REST' %}
-    "vue-axios": "^2.1.4",
+    "@nuxtjs/apollo": "^4.0.0-rc16",
+    "graphql-tag": "^2.10.1",
     {% endif %}
-    "vue-router": "^3.0.3",
-    {% if cookiecutter.ui == 'Vuetify' %}
-    "vuetify": "^1.5.7",
-    {% endif %}
-    "vuex": "^3.0.1",
-    "vuex-persistedstate": "^2.5.4"
+    {% if cookiecutter.analytics == "Google Analytics" %}"@nuxtjs/google-analytics": "^2.2.1",{% endif %}
+    "vuex-persist": "^2.1.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "prettier": "^1.16.4",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "vue-jest": "^4.0.0-0"
   }
 }
