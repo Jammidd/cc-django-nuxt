@@ -1,10 +1,10 @@
-FROM node:11.13.0-alpine
+FROM node:10
 
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 
-RUN apk update && apk upgrade
-RUN apk add git
+RUN apt update && apt upgrade -y
+RUN apt install git
 
 COPY . /usr/src/nuxt-app/
 RUN npm install
