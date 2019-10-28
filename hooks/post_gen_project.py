@@ -38,24 +38,15 @@ def delete_api_files():
             '.graphqlrc',
             'backend/config/schema.py',
             'backend/apps/users/schema.py',
-            'frontend/src/services/apollo.js',
         ]
-        shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'frontend/src/graphql'))
+        shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'frontend/graphql'))
     else:
         files = [
             'backend/config/api.py',
             'backend/apps/users/views.py',
-            'backend/apps/users/serializers.py',
-            'frontend/src/services/api.js'
+            'backend/apps/users/serializers.py'
         ]
-        shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'frontend/src/store'))
-
-    if '{{ cookiecutter.ui }}' != 'Tailwind CSS':
-      files + [
-        'frontend/src/assets/scss/tailwind.css',
-        'frontend/tailwind.js',
-        'frontend/postcss.config.js'
-      ]
+        shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'frontend/store'))
     
     for filename in files:
         os.remove(os.path.join(PROJECT_DIRECTORY, filename))
