@@ -8,6 +8,7 @@ RUN apt install git
 
 COPY . /usr/src/nuxt-app/
 RUN npm install
+RUN npm install -g nuxt
 
 RUN npm run build
 ENV HOST 0.0.0.0
