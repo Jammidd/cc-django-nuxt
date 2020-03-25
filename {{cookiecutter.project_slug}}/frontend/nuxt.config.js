@@ -49,8 +49,14 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    {% if cookiecutter.api == 'GraphQL' %}
+    {% if cookiecutter.api == "GraphQL" %}
     '@nuxtjs/apollo',
+    {% endif %}
+    {% if cookiecutter.ui == "Bootstrap" %}
+    'bootstrap-vue/nuxt',
+    {% endif %}
+    {% if cookiecutter.ui == "Semantic UI" %}
+    'semantic-ui-vue/nuxt',
     {% endif %}
   ],
   /*

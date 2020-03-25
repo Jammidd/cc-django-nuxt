@@ -12,12 +12,10 @@
     "timezone": "UTC",
     "api": ["REST", "GraphQL"],
     "db": ["PostgreSQL", "MySQL", "MongoDB"],
-    "ui": ["Bootstrap", "Semantic UI", "Vuetify", "Tailwind CSS"],
+    "ui": ["Bootstrap", "Semantic UI", "Tailwind CSS"],
     "backups": "y",
     
     "==================== INTEGRATIONS ===================": " ",
-    "use_sentry": "y",
-    "use_portainer": "y",
     "use_sparkpost": "y",
     "analytics": ["Google Analytics", "None"]
 }

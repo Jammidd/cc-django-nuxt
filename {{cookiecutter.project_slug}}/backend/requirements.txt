@@ -6,7 +6,7 @@ backcall==0.1.0
 certifi==2018.8.24
 chardet==3.0.4
 decorator==4.3.0
-Django==2.2.6
+Django==3.0.5
 django-allauth==0.38.0
 django-cors-headers==3.0.2
 django-environ==0.4.5
@@ -60,5 +60,5 @@ graphql-relay==0.4.5
 {% if cookiecutter.db == 'MongoDB' %}
 djongo==1.2.32
 {% elif cookiecutter.db == 'PostgreSQL' %}
-psycopg2-binary==2.8.3
+psycopg2-binary==2.8.4
 {% endif %}
