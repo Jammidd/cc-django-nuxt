@@ -63,7 +63,6 @@ Answer the prompts with your own desired options. For example:
     Choose from 1, 2 [1]: 2
     backups [y]: y
     ==================== INTEGRATIONS =================== [ ]:
-    use_sentry [y]: y
     use_mailhog [y]: y
     Select analytics:
     1 - Google Analytics
