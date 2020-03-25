@@ -1,5 +1,5 @@
 # Stage 1 - build frontend app
-FROM node:10 as build-deps
+FROM node:13 as build-deps
 
 WORKDIR /app/
 
